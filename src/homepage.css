@@ -1,0 +1,20 @@
+.home {
+    text-align: center;
+    padding-top: 2rem;
+    /* background-color: antiquewhite; */
+
+}
+
+.mainhome {
+    background-color: whitesmoke;
+    height: 100vh;
+}
+
+.image {
+    height: 40vh;
+
+}
+
+.home-text {
+    color: rgb(117, 66, 66);
+}
