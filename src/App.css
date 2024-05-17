@@ -1,9 +1,9 @@
-.navbar {
+/*.navbar {
   padding: 1rem 2rem;
   /* Adjust padding */
-  background-color: #343a40;
-  /* Dark background */
-}
+/* background-color: #343a40; */
+/* Dark background */
+/* } */
 
 .container-fluid {
   color: red;
@@ -11,16 +11,16 @@
 }
 
 /* Navbar Brand */
-.navbar-brand {
+/* .navbar-brand {
   font-size: 1.8rem;
 
   font-weight: bold;
   color: #fff;
 
-}
+} */
 
 /* Navbar Links */
-.nav-link {
+/* .nav-link {
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
   color: #fff !important;
@@ -28,9 +28,9 @@
 }
 
 .nav-link:hover {
-  background-color: #495057;
-  /* Background color on hover */
-  border-radius: 5px;
+  background-color: #495057; */
+/* Background color on hover */
+/* border-radius: 5px;
 }
 
 .navbar-toggler {
@@ -47,5 +47,146 @@
   .navbar-nav .nav-link {
     text-align: center;
 
-  }
+  } */
+/* } */
+
+
+.logo-ctl {
+  width: 50px;
+  height: 50px;
+}
+
+.logoname {
+  color: red;
+  font-weight: bold;
+}
+
+.myNav li a {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.myNav li a:hover {
+  color: red;
+}
+
+.hero-left {}
+
+.hero-left h2 {
+  color: black;
+  padding-bottom: 10px;
+  padding-top: 100px;
+}
+
+
+.hero-left p {
+  color: black;
+  font-size: 16px;
+}
+
+.hero-logo {
+  color: #BF1E2E;
+}
+
+.hero-button {
+  background: #BF1E2E;
+  padding: 20px;
+  border: 0px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.hero-button:hover {
+  background: rgba(157, 38, 38, 0.949);
+}
+
+.body-content {
+  flex: 1 0 45%;
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+}
+
+.footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 30px;
+}
+
+
+.loginArea {
+  min-height: 500px;
+}
+
+.loginBody {
+  margin-top: 200px;
+}
+
+.loginbutton {
+  background-color: red;
+  font-size: 20px;
+  color: white;
+  border: 0px;
+  padding: 10px 40px;
+  border-radius: 0px;
+}
+
+.loginbutton:hover {
+  background-color: black;
+}
+
+.loginBody input {
+  border-radius: 0px;
+}
+
+.themebutton {
+  background-color: red;
+  padding: 10px 40px;
+  margin-right: 10px;
+  border-radius: 0px;
+  border: 0px;
+}
+
+.themebutton:hover {
+  background-color: black;
+
+}
+
+.transaction-area {
+  min-height: 700px;
+}
+
+.transaction-form input {
+  border-radius: 0px;
+}
+
+.smallimage {
+  max-width: 100%;
+  max-height: 100vh;
+  padding-right: 0%;
+
+}
+
+.row {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bg-custom {
+  background-color: #4b99ab;
+  /* CIBC Red */
+}
+
+.nav-link:hover {
+  color: #FFD200 !important;
+  /* CIBC Gold */
 }

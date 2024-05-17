@@ -1,82 +1,50 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Homepage from './homepage';
 import Login from './login';
-import Deposit from './deposit';
-import Withdraw from './withdrawal';
-import Transactions from './transaction';
+import Dashboard from './dashboard';
 import myimage from './cibc.svg';
+import Footer from './footer';
 
-function App() {
-  const [balance, setBalance] = useState(0);
-  const [transactions, setTransactions] = useState([]);
-
-  const handleDeposit = (accountNumber, amount) => {
-    const newBalance = balance + amount;
-    setBalance(newBalance);
-    setTransactions([...transactions, { type: 'Deposit', accountNumber, amount, balance: newBalance, date: new Date().toLocaleString() }]);
-  };
-
-  const handleWithdraw = (accountNumber, amount) => {
-    const newBalance = balance - amount;
-    setBalance(newBalance);
-    setTransactions([...transactions, { type: 'Withdraw', accountNumber, amount, balance: newBalance, date: new Date().toLocaleString() }]);
-  };
-
+const App = () => {
   return (
-    // <Router>
-    <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            <img src={myimage}></img>
-          </Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/login">
-                  Login
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/withdraw">
-                  Withdraw
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/deposit">
-                  Deposit
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/transactions">
-                  Transactions
-                </Link>
-              </li>
-            </ul>
-          </div>
+    // <BrowserRouter>
+    <div>
+      <nav className="myNav navbar navbar-expand-lg navbar-dark bg-custom">
+        <div className="container">
+          <Link className="navbar-brand" to="/"> <h3 className='logoname'> <img src={myimage} className='logo-ctl' alt="logo" /></h3></Link>
+          <ul className=" navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Homepage</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">Login</Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/dashboard">Dashboard</Link>
+            </li>
+
+          </ul>
         </div>
       </nav>
+
       <Routes>
-        <Route path="/" element={<Homepage balance={balance} />} />
+        <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/withdraw" element={<Withdraw onWithdraw={handleWithdraw} />} />
-        <Route path="/deposit" element={<Deposit onDeposit={handleDeposit} />} />
-        <Route path="/transactions" element={<Transactions transactions={transactions} />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-    </div>
-    // </Router>
+
+      <Footer></Footer>
+
+
+
+
+    </div >
+    // </BrowserRouter>
   );
-}
+};
 
 export default App;

@@ -1,29 +1,59 @@
-
 import React from 'react';
-import './homepage.css';
-import background from './bgImage.avif'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import bgimage from './bgImage.avif';
 
-function Homepage({ balance }) {
-    const myStyle = {
-        backgroundImage: `url(${background})`,
-        height: "100vh",
-        marginTop: "-70px",
-        fontSize: "50px",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-    }
+const Home = () => {
     return (
-        <div style={myStyle}>
-            {/* <div className="mainhome"> */}
-            {/* <img src={image} alt="logo"></img> */}
-            {/* <div className="home"> */}
-            {/* <h1 className="home-text">Welcome to CIBC Bank</h1> */}
-            {/* <img className="image" src={image} alt="logo"></img> */}
+        <div>
+            <div className='container'>
+                <div className='row'>
+
+                    <div className='hero-left col-md-6'>
+                        <h2>Welcome to <span className='hero-logo'>CIBC Bank</span></h2>
+                        <p>WELCOME TO CIBC PERSONAL BANKING <br></br>
+                            Do more with your money</p>
+                        <button className="hero-button cbtn btn-primary">Open Account With Us</button>
+                    </div>
+                    <div className='bgimage col-md-6'>
+                        <img src={bgimage} className="smallimage" alt="bgimage" />
+                    </div>
+                </div>
+
+                <BodyArea />
+
+
+
+
+            </div>
 
         </div>
-        // </div></div>
+    );
+};
+
+
+const BodyArea = () => {
+    return (
+
+        <div className='d-flex justify-content-center align-items-center' style={{ height: '100vh' }}>
+            <div className='row mx-auto'>
+                <div className='body-content col-md-4'>
+
+                    <h3>Checquing Account</h3>
+                    <p>With a checking account, you can deposit and withdraw money easily through various channels, including ATMs, online banking, mobile apps, and bank branches. This accessibility ensures that your funds are always within reach whenever you need them</p>
+
+                </div>
+
+                <div className='body-content col-md-4'>
+
+                    <h3>Saving Account</h3>
+                    <p>With a checking account, you can deposit and withdraw money easily through various channels, including ATMs, online banking, mobile apps, and bank branches. This accessibility ensures that your funds are always within reach whenever you need them</p>
+
+                </div>
+
+            </div>
+        </div>
+
+
     );
 }
 
-export default Homepage;
+export default Home;
